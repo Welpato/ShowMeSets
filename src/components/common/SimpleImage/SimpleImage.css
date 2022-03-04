@@ -1,0 +1,29 @@
+.simple-img{
+    background-color: white;
+    padding: 1%;
+    border-radius: 5%;
+}
+
+.square-img-small {
+    height: 100px;
+    width: 100px;
+}
+
+.square-img-medium {
+    height: 200px;
+    width: 200px;
+}
+
+.square-img-big {
+    height: 300px;
+    width: 300px;
+}
+
+.simple-img-card {
+    height: 20em;
+    background-color: none;
+    border: black;
+    border-style: inset;
+    border-radius: 10px;
+    margin: 5px;
+}

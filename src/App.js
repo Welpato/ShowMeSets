@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import ShowSetList from './pages/ShowSetList';
+import ShowSet from './pages/ShowSet';
+import { PATH_REGEX } from './utils/constants';
+import Header from './components/Header/Header';
 
-function App() {
+function App() {    
+  let path = window.location.pathname
+  path = path.match(PATH_REGEX)
+  let CurrentView
+  
+  if(path !== null) {
+    if(path[2] === 'set/' && path[3] !== "") {
+      CurrentView = ShowSet(path[3])
+    }
+  }
+  
+  if(CurrentView === undefined) {
+    CurrentView = ShowSetList()
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className='App-body'>
+        {CurrentView}
+      </div>      
     </div>
   );
 }

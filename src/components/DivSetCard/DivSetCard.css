@@ -1,0 +1,21 @@
+.div-set-card:hover {
+    background-color: rgb(163, 163, 163);
+    cursor:pointer;
+}
+
+.div-set-card {
+    display: inline-block;
+    width: 15em;
+    height: 15em;
+    background-color: gray;
+    padding:3%;
+    border: black;
+    border-style: inset;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.div-set-card, h2 {
+    color: white;
+}
+

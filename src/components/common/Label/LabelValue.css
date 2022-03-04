@@ -1,0 +1,11 @@
+.label-value, label {
+    font-weight: bold;
+}
+
+.label-value, span {
+    font-weight: 400;
+}
+
+.label-value {
+    color: white;
+}
